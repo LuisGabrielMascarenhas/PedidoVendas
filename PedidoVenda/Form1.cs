@@ -26,7 +26,36 @@ namespace PedidoVenda
 
         private void btnAdicionarPedido_Click(object sender, EventArgs e)
         {
+            string nomeProduto = txtNomeProduto.Text;
+            double precoUnitario;
+            int quantidade;
 
+            if (double.TryParse(txtPrecoUnitario.Text, out precoUnitario) && int.TryParse(txtQuantidade.Text, out quantidade))
+            {
+                Pedido NovoPedido = new Pedido
+                {
+                    nomeProduto = nomeProduto,
+                    precoUnitario = precoUnitario,
+                    quantidade = quantidade
+                };
+
+                pedido.Add(NovoPedido);
+
+                MessageBox.Show("Pedido adicionado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LimparCampos();
+
+            }
+            else
+            {
+                MessageBox.Show("Certifique-se de inserir valores válidos para o preço e a quantidade.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LimparCampos()
+        {
+            txtNomeProduto.Clear();
+            txtPrecoUnitario.Clear();
+            txtQuantidade.Clear();
         }
 
         private void Form1_Load(object sender, EventArgs e)
