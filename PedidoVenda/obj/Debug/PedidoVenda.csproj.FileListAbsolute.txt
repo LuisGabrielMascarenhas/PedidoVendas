@@ -1,0 +1,5 @@
+C:\Users\Laboratorio-Info\source\repos\PedidoVenda\PedidoVenda\obj\Debug\PedidoVenda.csproj.AssemblyReference.cache
+C:\Users\Laboratorio-Info\source\repos\PedidoVenda\PedidoVenda\obj\Debug\PedidoVenda.Form1.resources
+C:\Users\Laboratorio-Info\source\repos\PedidoVenda\PedidoVenda\obj\Debug\PedidoVenda.Properties.Resources.resources
+C:\Users\Laboratorio-Info\source\repos\PedidoVenda\PedidoVenda\obj\Debug\PedidoVenda.csproj.GenerateResource.cache
+C:\Users\Laboratorio-Info\source\repos\PedidoVenda\PedidoVenda\obj\Debug\PedidoVenda.csproj.CoreCompileInputs.cache
