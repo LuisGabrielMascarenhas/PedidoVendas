@@ -1,7 +1,7 @@
 ﻿
 namespace PedidoVenda
 {
-    partial class Form1
+    partial class formPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,6 @@ namespace PedidoVenda
             this.btnAdicionarPedido = new System.Windows.Forms.Button();
             this.btnListarPedido = new System.Windows.Forms.Button();
             this.btnCalcularTotal = new System.Windows.Forms.Button();
-            this.ListaPedido = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // txtQuantidade
@@ -107,6 +106,7 @@ namespace PedidoVenda
             this.btnListarPedido.TabIndex = 7;
             this.btnListarPedido.Text = "Listar Pedidos";
             this.btnListarPedido.UseVisualStyleBackColor = true;
+            this.btnListarPedido.Click += new System.EventHandler(this.btnListarPedido_Click);
             // 
             // btnCalcularTotal
             // 
@@ -117,22 +117,13 @@ namespace PedidoVenda
             this.btnCalcularTotal.Text = "Calcular Total";
             this.btnCalcularTotal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCalcularTotal.UseVisualStyleBackColor = true;
+            this.btnCalcularTotal.Click += new System.EventHandler(this.btnCalcularTotal_Click);
             // 
-            // ListaPedido
-            // 
-            this.ListaPedido.FormattingEnabled = true;
-            this.ListaPedido.Location = new System.Drawing.Point(96, 242);
-            this.ListaPedido.Name = "ListaPedido";
-            this.ListaPedido.Size = new System.Drawing.Size(239, 95);
-            this.ListaPedido.TabIndex = 9;
-            this.ListaPedido.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // Form1
+            // formPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ListaPedido);
             this.Controls.Add(this.btnCalcularTotal);
             this.Controls.Add(this.btnListarPedido);
             this.Controls.Add(this.btnAdicionarPedido);
@@ -142,8 +133,9 @@ namespace PedidoVenda
             this.Controls.Add(this.txtPrecoUnitario);
             this.Controls.Add(this.txtNomeProduto);
             this.Controls.Add(this.txtQuantidade);
-            this.Name = "Form1";
+            this.Name = "formPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,7 +152,6 @@ namespace PedidoVenda
         private System.Windows.Forms.Button btnAdicionarPedido;
         private System.Windows.Forms.Button btnListarPedido;
         private System.Windows.Forms.Button btnCalcularTotal;
-        private System.Windows.Forms.ListBox ListaPedido;
     }
 }
 

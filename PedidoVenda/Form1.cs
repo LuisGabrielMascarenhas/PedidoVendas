@@ -10,24 +10,57 @@ using System.Windows.Forms;
 
 namespace PedidoVenda
 {
-    public partial class Form1 : Form
+    public partial class formPrincipal : Form
     {
-        public Form1()
+
+        private List<Pedido> pedido = new List<Pedido>();
+
+        public formPrincipal()
         {
             InitializeComponent();
 
-            private void 
         }
        
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
+     
 
         private void btnAdicionarPedido_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListarPedido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalcularTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public class Pedido{ 
+            public string nomeProduto { get; set; }
+
+            public double precoUnitario { get; set; }
+            
+            public int quantidade { get; set; }
+
+            public double calcularTotal()
+            {
+                return precoUnitario * quantidade;
+            
+            }
         }
     }
 }
